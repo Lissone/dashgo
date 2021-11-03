@@ -1,24 +1,12 @@
 import { Box, Flex, Heading, Button, Icon, Table, Thead, Tr, Th, Checkbox, Tbody, Td, Text, useBreakpointValue, Spinner } from '@chakra-ui/react'
-import Link from 'next/link'
 import { RiAddLine, RiPencilLine } from 'react-icons/ri'
-import { useQuery } from 'react-query'
+import Link from 'next/link'
 
-import { api } from '../../services/api'
+import { useUsers } from '../../services/hooks/useUsers'
 
 import { Header } from '../../components/Header'
 import { Sidebar } from '../../components/Sidebar'
 import { Pagination } from '../../components/Pagination'
-
-interface IUser {
-  id: string
-  name: string
-  email: string
-  createdAt: string
-}
-
-interface ApiUsersResponse {
-  users: IUser[]
-}
 
 export default function UserList() {
   const isWideVersion = useBreakpointValue({
@@ -26,24 +14,7 @@ export default function UserList() {
     lg: true
   })
 
-  const { isLoading, data, isFetching, error } = useQuery('users', async () => { // name of key cache local and fetch to get data
-    const { data } = await api.get<ApiUsersResponse>('/users')
-
-    const users = data.users.map(user => {
-      return {
-        ...user,
-        createdAt: new Date(user.createdAt).toLocaleDateString('pt-BR', {
-          day: '2-digit',
-          month: 'long',
-          year: 'numeric'
-        })
-      }
-    })
-
-    return users
-  }, {
-    staleTime: 1000 * 5 // 5 seconds in fresh state
-  })
+  const { data, isLoading, isFetching, error } = useUsers()
 
   return (
     <Box>
