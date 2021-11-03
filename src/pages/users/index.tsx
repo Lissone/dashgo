@@ -3,9 +3,22 @@ import Link from 'next/link'
 import { RiAddLine, RiPencilLine } from 'react-icons/ri'
 import { useQuery } from 'react-query'
 
+import { api } from '../../services/api'
+
 import { Header } from '../../components/Header'
 import { Sidebar } from '../../components/Sidebar'
 import { Pagination } from '../../components/Pagination'
+
+interface IUser {
+  id: string
+  name: string
+  email: string
+  createdAt: string
+}
+
+interface ApiUsersResponse {
+  users: IUser[]
+}
 
 export default function UserList() {
   const isWideVersion = useBreakpointValue({
@@ -14,8 +27,7 @@ export default function UserList() {
   })
 
   const { isLoading, data, isFetching, error } = useQuery('users', async () => { // name of key cache local and fetch to get data
-    const response = await fetch('http://localhost:3000/api/users')
-    const data = await response.json()
+    const { data } = await api.get<ApiUsersResponse>('/users')
 
     const users = data.users.map(user => {
       return {
