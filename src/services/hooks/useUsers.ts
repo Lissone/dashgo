@@ -42,6 +42,6 @@ export async function getUsers(page: number): Promise<GetUsersResponse> {
 
 export function useUsers(page: number) {
   return useQuery(['users', page], () => getUsers(page), { // name of key cache local and fetch to get data
-    staleTime: 1000 * 5 // 5 seconds in fresh state
+    staleTime: 1000 * 60 * 10 // 10 minutes in fresh state
   })
 }
