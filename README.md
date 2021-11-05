@@ -30,7 +30,7 @@
 
 ## Description
 
-A company administration website, tracking the number of employees and products. The project was developed as an incentive to learn and improve myself more on the subject of declarative interface using Chakra UI and applying graphics to the dashboard in practice, using react compatible libs.
+An administration and monitoring site, with dashboard. The project was developed as an incentive to learn and improve myself more in the subject of declarative interface using Chakra UI, and to know new data fetching libraries (React query), dashboard charts (Apex charts), fake api (MirageJs), bulk random data generator (Faker) and form controllers (React hook form).
 
 ## Requirements
 
@@ -43,7 +43,10 @@ A company administration website, tracking the number of employees and products.
 * NextJs
 * Typescript
 * Chakra UI
-* ApexCharts
+* Apex Charts
+* React hook form
+* React query
+* MirageJs (fake api)
 
 ## Usage
 
