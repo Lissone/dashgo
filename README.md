@@ -50,8 +50,7 @@ An administration and monitoring site, with dashboard. The project was developed
 
 ## Usage
 
-You can use this project as a template for another one, or clone it on your pc using the command:
-
+You can clone it on your pc using the command:
 ```bash
 git clone https://github.com/Lissone/dashgo.git
 cd dashgo
