@@ -30,40 +30,46 @@
 
 ## Description
 
-An administration and monitoring site, with dashboard. The project was developed as an incentive to learn and improve myself more in the subject of declarative interface using Chakra UI, and to know new data fetching libraries (React query), dashboard charts (Apex charts), fake api (MirageJs), bulk random data generator (Faker) and form controllers (React hook form).
+An administration and monitoring site, with dashboard. 
+
+The project was developed as an incentive to learn and improve myself more in the subject of declarative interface using Chakra UI, and to know new data fetching libraries (React query), dashboard charts (Apex charts), fake api (MirageJs), bulk random data generator (Faker) and form controllers (React hook form).
 
 ## Requirements
 
-* [Yarn](https://yarnpkg.com/)
-* [Nodejs](https://nodejs.org/en/)
+- [Nodejs](https://nodejs.org/en/)
+- [Npm](https://www.npmjs.com/)
+- [Yarn](https://yarnpkg.com/)
 
 ## Technologies
 
-* ReactJs
-* NextJs
-* Typescript
-* Chakra UI
-* Apex Charts
-* React hook form
-* React query
-* MirageJs (fake api)
+- ReactJs
+- NextJs
+- Typescript
+- Chakra UI
+- Apex Charts
+- React query
+- React hook form
+- MirageJs (fake api)
 
 ## Usage
 
 You can clone it on your pc using the command:
+
 ```bash
 git clone https://github.com/Lissone/dashgo.git
 cd dashgo
 ```
 
 Install dependencies using:
+
 ```bash
 yarn
 #or
-npm run
+npm install
 ```
 
 Run application:
+
 ```bash
 yarn dev
 #or
